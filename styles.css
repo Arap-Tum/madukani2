@@ -1,0 +1,522 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    box-sizing: border-box;
+    font-family: "inter", sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden; 
+} 
+
+header {
+    position: fixed;
+    overflow-x: hidden;
+    /* top: 0; */
+    width: 100%;
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background: linear-gradient(rgb(218, 165, 32, 0.8), rgb(218, 165, 32, 0.1));
+    color: white;
+    z-index: 1000;
+}
+
+/* Apply blur for browser that support it  */
+@supports (backdrop-filter: blur(10px)) {
+    header {
+        backdrop-filter: blur(10px);
+    }
+}
+
+.logo img {
+    height: 30px;
+    border-radius: 5px;
+}
+
+/* Style the roggle button */
+ .toggle-btn {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 6000;
+ }
+.toggle-btn:hover {
+    background-color: rgb(218, 165, 32, 0.3);
+}
+
+ /* Side-bar styles */
+ .container {
+    display: flex;
+ }
+
+ .sidebar {
+    position: relative;
+    overflow: hidden;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    height: 100vh;
+    
+    background-color: #f7f7f7;
+     padding: 24px;
+     transform: translateX(-100%);
+    transition: transform 0.3 ease; 
+    z-index: 5000; 
+
+ }
+
+   /* Customize the scrollbar */
+     .sidebar::-webkit-scrollbar {
+        width: 12px;
+     }
+
+     .sidebar::-webkit-scrollbar-track{
+        background:  transparent;
+     }
+     .sidebar::-webkit-scrollbar-thumb {
+        background-color: rgba(218, 165, 32, 0.8);
+        border-radius: 10px;
+     }
+     .sidebar::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(218, 165, 32, 1);
+     }
+     /* Firefox */
+     @supports (
+      scrollbar-color: rgba(218, 165, 32, 0.8) transparent ) {
+        .sidebar {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(218, 165, 32, 0.8) transparent; 
+        }
+    }
+
+
+ .sidebar-content {
+    height: 100%;
+    overflow: auto;
+ }
+ 
+ .sidebar.active {
+    transform: translateX(0);
+ }
+
+.menu {
+    list-style: none;
+    padding: 20px;
+}
+
+.menu ul li {
+    margin: 15px 0 ;
+    position: relative;
+    margin-bottom: 2px;
+}
+.menu .top a{
+    gap: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+    padding: 12px 8px;  
+    color: #3a3a3a;
+    transition: all 0.3s;
+    
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.top.active .arrow {
+    transform: rotate(180deg);
+}
+
+
+.menu  li a {
+    text-decoration: none;
+
+}
+/* .menu  ul li a, */
+.menu  li a:hover,
+.menu li .active a {
+    color: #000;
+    background-color: rgb(218, 165, 32, 0.1);
+}
+
+.menu li .icon {
+    font-size: 20px;
+}
+menu li .text {
+    flex: 1;
+}
+.sub-menu {
+    list-style: none;
+}
+.sub-menu ul li a {
+    color: #757575;
+}
+
+.nav {
+    flex: 1;
+}
+
+/* Sub menu style */
+.menu .sub-menu {
+     display: none; 
+    margin-left: 20px;
+    padding-left: 20px ;
+    padding-top: 5px;
+    border-left: 1px solid #f6f6f6;
+}
+ .menu .sub-menu li a {
+    /* padding: 0 5px; */
+    font-size: 12px;
+}
+
+.menu:not(:last-child) {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid white;
+} 
+
+/* Make whatsap stik */
+.whatsapp-button {
+    position: fixed;
+    bottom: 40px; /* Adjust distance from the bottom */
+    right: 40px;  /* Adjust distance from the right */
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1); /* Slightly enlarges the button */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional animation: pulsing effect */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.whatsapp-button.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+
+/* search bar and Cart bar and icon styling */
+.top-bar {
+    display: flex;
+    /* width: 100%; */
+    align-items: center;
+    padding: 15px ;
+    background-color: #f7f7f7;
+    border-top: 2px solid #f6f6f6;
+    border-bottom: 2px solid #f6f6f6;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    margin-top: 10px;
+    gap: 20px;
+    width: 100%;
+    z-index: 2000;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(218, 165, 32, 0.8);
+    border-radius: 7px;
+    /* overflow: hidden; */
+    width: 50%;
+}
+
+.search-bar  input {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    flex: 1;
+    font-size: 16px;
+    color: #777;
+}
+
+.search-bar input::placeholder {
+    color: #ddd;
+}
+
+.search-bar button {
+    background-color: rgb(218, 165, 32, 0.7);
+    color: white;
+    border: none;
+    padding: 2px 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar button:hover {
+    background-color: rgb(218, 165, 32, 10);
+}
+
+.search-bar button i {
+    font-size: 16px;
+}
+
+
+.cart {
+    
+    top:2px;
+    /* gap: 5px; */
+    left: 150px;
+    display: flex;
+    align-items: center;
+  
+}
+.top-bar a {
+    text-decoration: none;
+}
+
+.top-bar  .icon {
+    color: black;
+    font-size: 24px;
+}
+.cart span{
+    
+    color: red;
+    background-color: white;
+    
+    border-radius: 50%;
+    margin-left: 5px;
+}
+        /* small screens(phones) */
+        @media (max-width:740px){
+            header  {
+                overflow: hidden;
+            }
+            .top-bar {
+                align-items: flex-start;
+                padding: 2px;
+                overflow-x: hidden;
+            }
+            
+            .search-bar {
+                padding-right: 0;
+                width: 70%;
+            }
+            .search-bar input {
+                font-size: 12px;
+            }
+            .cart {
+                left: 50px; /* Adjust for smaller screens */
+                top: 5px;
+            }
+        }
+
+        /* small screens(phones) */
+        @media (max-width:480px){
+            header {
+                overflow-x: hidden;
+            }
+            .top-bar {
+                align-items: flex-start;
+                padding: 2px;
+                overflow-x: hidden;
+            }
+     
+            .search-bar {
+                padding-right: 0;
+                width: 70%;
+            }
+            .search-bar button  {
+                font-size: 10px;
+            }
+            .search-bar input {
+                font-size: 12px;
+            }
+            
+            .cart {
+                left: 50px; /* Adjust for smaller screens */
+                top: 5px;
+            }
+        }
+ 
+
+        /* small screens(phones) */
+        @media (max-width:354px){
+
+            .top-bar {
+                align-items: flex-start;
+                padding: 2px;
+                overflow-x: hidden;
+            }
+           
+            .search-bar {
+                padding-right: 0;
+                width: 60%;
+
+            }
+            .search-bar button i {
+                font-size: 12px;
+            }
+            .search-bar input {
+                font-size: 5px;
+            }
+
+            
+        }
+    
+/* the scroll bar */
+.scroll-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    /* background-color: #f7f7f7; */
+    
+    position: absolute; /* Adjusted from absolute if you want a fixed position */
+    top: 120px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    overflow-x: auto; /* Added to enable horizontal scrolling */
+}
+
+.categories {
+    display: inline-flex;
+    padding: 5px;
+    overflow: auto;
+    
+    /* for scroll bar to deaspear in some website */
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.category-item {
+    gap: 10px;
+    padding: 8px;
+    margin-right: 10px;
+    background-color: #f6f6f6;
+    color: #757575; /* Fixed invalid hex color */
+    border: 1px solid #ddd;
+    font-size: 12px;
+    border: none;
+    cursor: pointer; /* Fixed cursor typo */
+    transition: background-color 0.3s ease;   
+}
+
+.category-item:hover {
+    background-color: rgba(225, 215, 0, 0.5); /* Adjusted for proper rgba format */
+    color: #000;
+}
+    /* fit screen */ 
+    @media (max-width:400px){
+        .scroll-bar {
+            align-items: flex-start;
+            padding: 2px
+        }
+        .category-item {
+            gap: 5px;
+            padding: 4px;
+            font-size: 9px;
+
+
+        }
+    }
+
+    @media (max-width: 340px){
+        .scroll-bar {
+            align-items: flex-start;
+            padding: 2px
+        }
+        .category-item {
+            gap: 5px;
+            padding: 4px;
+            font-size: 7px;
+
+
+        }
+    }
+
+
+
+      
+
+
+
+
+ 
+
+/* Go back arrow */
+
+.icon {
+    font-size: 1.5em;
+    color: #000;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+
+} 
+
+/* Style the sliding notification panel */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: -300px; /* Start off-screen */
+    background-color: #28a745;
+    color: white;
+    border: 2px solid #28a745;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: right 0.5s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    right: 20px; /* Slide into view */
+}
+
+/* The exit icon arro */
+.exit .arrow {
+    color: #757575;
+    padding: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.exit .arrow:hover {
+    color: #000;
+    cursor: pointer;
+    font-size: 24px;
+}

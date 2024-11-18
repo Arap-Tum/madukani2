@@ -1,0 +1,77 @@
+[
+   
+    {
+        "id": 2,
+        "number": 3,
+        "name": "Tshirt",
+        "price":"ksh 1,150",
+        "image":"img/2 (1).jpg",
+        "description":"Show off your style with our classic T-shirt, made from soft, breathable cotton for all-day comfort, featuring a timeless fit and a range of vibrant colors to suit any occasion.",
+        "category":"clothing"
+    },
+    {
+        "id": 3,
+        "number": 5,
+        "name": "Smartphone",
+        "price":"ksh 22,000",
+        "image":"img/3 (1).jpg",
+        "description":"Stay connected in style with our latest smartphone, featuring a stunning high-resolution display, advanced camera capabilities, and a sleek design that fits comfortably in your hand.",
+        "category":"Electronics"
+    },{
+        "id": 4,
+        "number": 3,
+        "name": "Microwave",
+        "price":"ksh 3,500",
+        "image":"img/4 (1).jpg",
+        "description":"Simplify your cooking with our versatile microwave, designed with multiple cooking presets and a sleek stainless steel finish, making meal preparation quick and convenient for any kitchen.",
+        "category":"Apliance"
+    },{
+        "id": 5,
+        "number": 10,
+        "name": "Lipstik",
+        "price":"ksh 2,500",
+        "image":"img/5 (1).jpg",
+        "description":"Add a pop of color to your look with our luxurious lipstick, enriched with nourishing ingredients for a smooth application and long-lasting wear, available in a variety of stunning shades to match any occasion.",
+        "category":"Beauty"
+    },{
+        "id": 6,
+        "number": 2,
+        "name": "Puzzle",
+        "price":"ksh 6,800",
+        "image":"img/6 (1).jpg",
+        "description":"Challenge your mind and have fun with our engaging toy puzzle, designed with colorful pieces that promote problem-solving skills and creativity, perfect for kids and adults alike!",
+        "category":"Toys"
+    },{
+        "id": 7,
+        "number": 5,
+        "name": "Blender",
+        "price":"ksh 1,200",
+        "image":"img/7 (1).jpg",
+        "description":"Elevate your culinary experience with our powerful blender, designed with a sleek, ergonomic shape and multiple speed settings to effortlessly blend, mix, and puree your favorite ingredients.",
+        "category":"Apliance"
+    },{
+        "id": 8,
+        "number": 8,
+        "name": "Dog Leash",
+        "price":"ksh 1,500",
+        "image":"img/8 (1).jpg",
+        "description":"Keep your furry friend safe and stylish with our durable dog leash, crafted from high-quality, lightweight materials and featuring a comfortable grip for long walks.",
+        "category":"Apliance"
+    },{
+        "id": 9,
+        "number": 12,
+        "name": "Neclace",
+        "price":"ksh 500",
+        "image":"img/9 (1).jpg",
+        "description":"Adorn yourself with elegance with this delicate necklace, featuring a refined chain and a shimmering pendant that adds a touch of sophistication to any outfit.",
+        "category":"Jewelery"
+    },{
+        "id": 10,
+        "number": 3,
+        "name": "Sofa",
+        "price":"ksh 15,000",
+        "image":"img/10 (1).jpg",
+        "description":"Experience ultimate comfort and style with our modern, plush sofa, featuring a sleek design and premium fabric that complements any living space.",
+        "category":"Funiture"
+    }
+]

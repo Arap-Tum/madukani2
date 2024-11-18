@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+     <!-- Icons -->
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Toggle button -->
+        <!-- <div class="toggle-btn" >
+            <i class="icon">☰</i>
+       </div> -->
+
+        <!-- The Search bar  -->
+        <div class="top-bar">
+            <div class="exit">
+                <span class="back-arrow" onclick="goBack()"><i class="arrow ph-bold ph-caret-left"></i></span> 
+           </div>
+           <button class="clear-cart" onclick="clearCart()">Clear Cart <i class="icon"></i></button>
+            
+           
+        </div>
+
+        <!-- side bar -->
+     <!-- <div class="sidebar">
+
+            <div class="sidebar-content">
+
+               <div class="nav">
+                   <ul class="menu">
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-storefront"></i><span class="text">Shope</span><i class="arrow ph-bold ph-caret-down"></i></a>
+
+                           <ul class="sub-menu">
+                            <li>
+                               <a href="#">
+                                   <span class="text">Rembo Hub</span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <span class="text">Chambi's Store</span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <span class="text"> Gift</span>
+                               </a>
+                            </li>
+                            <li>
+                                  <a href="#">
+                                    <span   class="text">Clothes </span>
+                                  </a>
+                            </li>
+                           </ul>
+
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-briefcase"></i><span class="text"> Service Info</span><i class="arrow ph-bold ph-caret-down"></i></a>
+
+                           <ul class="sub-menu">
+                               <li>
+                                  <a href="#">
+                                      <span class="text">ReturnPolicy</span>
+                                  </a>
+                               </li>
+                               <li>
+                                  <a href="#">
+                                      <span class="text">Refund</span>
+                                  </a>
+                               </li>
+                           </ul>
+                       </li>
+
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-truck"></i><span class="text"> How We Deliver</span></a></li>
+
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-buildings"></i><span class="text"> Company</span><i class="arrow ph-bold ph-caret-down"></i></a>
+                           
+                           <ul class="sub-menu">
+                               <li>
+                                  <a href="#">
+                                      <span class="text">Our Story</span>
+                                  </a>
+                               </li>
+                               <li>
+                                  <a href="#">
+                                      <span class="text">Our Location</span>
+                                  </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="text">Frequent Aked    uestion</span>
+                                   </a>
+                                </li>
+                           </ul>
+                       </li>
+
+                   </ul>
+
+               
+               </div>
+
+               <ul class="menu">
+                   <li class="top"><a href="#"><i class="icon ph-bold ph-star"></i><span class="text"> Reviews</span></a></li>
+               </ul>
+
+               <ul class="menu">
+                   <li class="top"><a href="#"><i class="icon ph-bold ph-envelope-simple"></i><span class="text"> Contact Us</span></a></li>
+
+                   <li class="top"><a href="#"><i class="icon ph-bold ph-info"></i><span class="text"> Help</span></a></li>
+
+                   <li class="top">    <a href="#">
+                       <i class="icon ph-bold ph-phone"></i>
+                       <span class="text">+2547 6904 7082</span>
+                   </a></li>
+               </ul>
+
+            </div>
+     </div>   -->
+     
+    <div class="main">
+         <!-- Cart items -->
+     <div class="my-cart">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-items"></div>
+        <div class="total">
+            <span>Total Price</span>
+            <span class="total-price">ksh 0.00</span>
+        </div>
+        <button class="purchase">Review and Purchase</button>
+     </div>
+    </div>
+ 
+    </div>
+    <script src="Script.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

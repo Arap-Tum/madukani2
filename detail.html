@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+       <!-- Icons -->
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+   
+   <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Toggle button -->
+        <!-- <div class="toggle-btn" >
+            <i class="icon">☰</i>
+       </div> -->
+
+        <!-- The Search bar  -->
+        <div class="top-bar">
+            <div class="exit">
+                <span class="back-arrow" onclick="goBack()"><i class="arrow ph-bold ph-caret-left"></i></span> 
+           </div>
+           <div class="cart">
+            <a class="cart" href="cart.html">
+                <i class="icon ph-bold ph-shopping-cart"></i>
+                <span class="cart-count">0</span>
+               </a>
+           </div>
+           <div class="div">
+            
+           </div>
+        </div>
+
+        <!-- side bar -->
+     <!-- <div class="sidebar">
+
+            <div class="sidebar-content">
+
+               <div class="nav">
+                   <ul class="menu">
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-storefront"></i><span class="text">Shope</span><i class="arrow ph-bold ph-caret-down"></i></a>
+
+                           <ul class="sub-menu">
+                            <li>
+                               <a href="#">
+                                   <span class="text">Rembo Hub</span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <span class="text">Chambi's Store</span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#">
+                                   <span class="text"> Gift</span>
+                               </a>
+                            </li>
+                            <li>
+                                  <a href="#">
+                                    <span   class="text">Clothes </span>
+                                  </a>
+                            </li>
+                           </ul>
+
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-briefcase"></i><span class="text"> Service Info</span><i class="arrow ph-bold ph-caret-down"></i></a>
+
+                           <ul class="sub-menu">
+                               <li>
+                                  <a href="#">
+                                      <span class="text">ReturnPolicy</span>
+                                  </a>
+                               </li>
+                               <li>
+                                  <a href="#">
+                                      <span class="text">Refund</span>
+                                  </a>
+                               </li>
+                           </ul>
+                       </li>
+
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-truck"></i><span class="text"> How We Deliver</span></a></li>
+
+                       <li class="top"><a href="#"><i class="icon ph-bold ph-buildings"></i><span class="text"> Company</span><i class="arrow ph-bold ph-caret-down"></i></a>
+                           
+                           <ul class="sub-menu">
+                               <li>
+                                  <a href="#">
+                                      <span class="text">Our Story</span>
+                                  </a>
+                               </li>
+                               <li>
+                                  <a href="#">
+                                      <span class="text">Our Location</span>
+                                  </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="text">Frequent Aked    uestion</span>
+                                   </a>
+                                </li>
+                           </ul>
+                       </li>
+
+                   </ul>
+
+               
+               </div>
+
+               <ul class="menu">
+                   <li class="top"><a href="#"><i class="icon ph-bold ph-star"></i><span class="text"> Reviews</span></a></li>
+               </ul>
+
+               <ul class="menu">
+                   <li class="top"><a href="#"><i class="icon ph-bold ph-envelope-simple"></i><span class="text"> Contact Us</span></a></li>
+
+                   <li class="top"><a href="#"><i class="icon ph-bold ph-info"></i><span class="text"> Help</span></a></li>
+
+                   <li class="top">    <a href="#">
+                       <i class="icon ph-bold ph-phone"></i>
+                       <span class="text">+2547 6904 7082</span>
+                   </a></li>
+               </ul>
+
+            </div>
+     </div>  -->
+     
+    <div class="main">
+         <!-- details content -->
+          <div class="detail">
+              <div class="image">
+                   <img src="" alt="">
+               </div>
+               <div class="content">
+                  <h1 class="name"></h1>
+                  <div class="price"></div>
+                  <div class="description"></div>
+                  <p class="stock"></p>
+           
+                  <button class="addCart"> Add to cart <i class="icon ph-bold ph-shoping-cart"></i></button>
+                    
+                  <div class="reviews">
+                     <p>Customer Reviews</p>
+                     <span class="stars">★★★★☆</span>
+                     
+                   </div>
+                
+               <div class="shop">
+                
+               </div>
+
+          
+            </div>
+   </div>
+
+   <div class="title">You May Also like</div>
+   <div class="listProduct"></div>
+    </div>
+ 
+    </div>
+
+    <div id="notification-panel" class="notification">
+        <span id="notification-message"></span>
+    </div>
+
+    <script src="Script.js"></script>
+    <script src="detail.js"></script>
+</body>
+</html>
